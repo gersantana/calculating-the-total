@@ -1,5 +1,9 @@
 :root {
     --primariColor:#38ac2d;
+    --bgBody:#d5cfcf;
+    --white:#ffffff;
+    --black:#000000;
+    --yellow:#ddd42a;
 }
 
 html {
@@ -11,4 +15,81 @@ html {
 }
 body {
     font-size: 1.6rem;
+}
+img {
+    /* max-width: 100%; */
+    display: block;
+}
+.text_center {
+    text-align: center;
+}
+.text_left {
+    text-align: left;
+}
+.container {
+    max-width: 120rem;
+}
+.container_center {
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--bgBody) ;
+    height: 100vh;
+}
+
+.flex_body {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card_body {
+    max-width: 50rem;
+    height: 60rem;
+    background-color: var(--primariColor);
+    border-radius: 1rem;
+    border: solid .1rem var(--black);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+.card_img {
+    padding: 2rem 4rem;
+    max-width: 40rem;
+}
+
+h3.product {
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.options_items {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+    gap: 2rem;
+}
+
+select {
+    height: 3.5rem;
+    border-radius: 1rem;
+}
+
+p.price {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.btn {
+    display: block;
+    margin: 3rem auto;
+    padding: 1rem 2rem;
+    border-radius: .7rem;
+    color: var(--white);
+    background-color: var(--yellow);
 }

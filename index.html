@@ -7,17 +7,27 @@
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<title>Calculando el total</title>
 	</head>
-	<body>
-		<section class="container">
-			<div class="car_body">
-				<img class="img_card" src="./assets/img/lap.jpg" alt="imagen" />
-				<h3 class="product"></h3>
-				<div class="options_items">
-					<select name="" id=""></select>
-					<select name="" id=""></select>
-					<p class="price"></p>
+	<body class="flex_body">
+		<section class="card_container">
+			<div class="card_body">
+				<img class="card_img" src="./assets/img/lap-removebg-preview.png" alt="imagen" />
+				<h3 class="product text_center">Asus AMD i3580</h3>
+				<div class="options_items text_left">
+					<select name="Cantidad" id="">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+					<select name="Color" id="select_color">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="green">Green</option>
+                        <option value="purple">Purple</option>
+                    </select>
+					<p class="price">Price; $400</p>
 				</div>
-				<button type="submit"></button>
+				<button class="btn" type="submit">Calcular Total</button>
 			</div>
 		</section>
 
