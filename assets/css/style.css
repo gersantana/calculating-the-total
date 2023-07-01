@@ -52,10 +52,8 @@ body {
     background-color: var(--primariColor);
     border-radius: 1rem;
     border: solid .1rem var(--black);
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 }
+
 .card_img {
     padding: 2rem 4rem;
     max-width: 40rem;
@@ -73,9 +71,12 @@ h3.product {
     gap: 2rem;
 }
 
-select {
+input, select {
     height: 3.5rem;
     border-radius: 1rem;
+    font-size: 2rem;
+    border: solid .1rem var(--black);
+
 }
 
 p.price {
@@ -92,4 +93,23 @@ p.price {
     border-radius: .7rem;
     color: var(--white);
     background-color: var(--yellow);
+}
+
+.result p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.flex_color_items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 3rem;
+}
+
+.color_items {
+    border-radius: 40rem;
+    width: 3rem;
+    height: 3rem;
+    border: solid .1rem var(--black);
 }

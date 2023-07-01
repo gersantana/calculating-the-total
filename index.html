@@ -3,38 +3,52 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./assets/css/normalize.css">
+		<link rel="stylesheet" href="./assets/css/normalize.css" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
 		<title>Calculando el total</title>
 	</head>
+
 	<body class="flex_body">
 		<section class="card_container">
 			<div class="card_body">
 				<img class="card_img" src="./assets/img/lap-removebg-preview.png" alt="imagen" />
 				<h3 class="product text_center">Asus AMD i3580</h3>
 				<div class="options_items text_left">
-					<select name="Cantidad" id="">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
+					<input type="text" name="Cantidad" id="items_num" placeholder="Quanty" />
 					<select name="Color" id="select_color">
-                        <option value="red">Red</option>
-                        <option value="blue">Blue</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="green">Green</option>
-                        <option value="purple">Purple</option>
-                    </select>
-					<p class="price">Price; $400</p>
+                        <option>--Color--</option>
+						<option value="red">Red</option>
+						<option value="blue">Blue</option>
+						<option value="yellow">Yellow</option>
+						<option value="green">Green</option>
+						<option value="purple">Purple</option>
+					</select>
+					<p class="price">Price; 499$</p>
 				</div>
-				<button class="btn" type="submit">Calcular Total</button>
+				<button class="btn" onclick="
+                let select_color = document.querySelector('#select_color')
+                let color_items = document.querySelector('.color_items')
+                color_items.style.backgroundColor = select_color.value
+
+                let cantidad = document.querySelector('#items_num')
+                let total_items = document.querySelector('#total_items')
+                total_items.innerHTML = cantidad.value
+
+                let total_price = document.querySelector('#total_price')
+                let resultado = cantidad.value * 499 +'$'
+                total_price.innerHTML = resultado
+                ">Calcular Total</button>
 			</div>
 		</section>
 
 		<section class="result">
-			<p>Total: <span class="total_price"></span></p>
-			<p>Cantidad: <span class="total_items"></span></p>
-			<p>Color: <span class="color_items"></span></p>
+			<p>Total: <span id="total_price">0$</span></p>
+			<p>Cantidad: <span id="total_items">0</span></p>
+			<div class="flex_color_items">
+				<p>Color:</p>
+				<div class="color_items"></div>
+			</div>
 		</section>
+
 	</body>
 </html>
