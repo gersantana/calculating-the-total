@@ -3,7 +3,8 @@
     --bgBody:#d5cfcf;
     --white:#ffffff;
     --black:#000000;
-    --yellow:#ddd42a;
+    --yellow:#e8fc08;
+    --shadow:#00000076;
 }
 
 html {
@@ -52,6 +53,7 @@ body {
     background-color: var(--primariColor);
     border-radius: 1rem;
     border: solid .1rem var(--black);
+    box-shadow: .3rem .2rem 1rem  var(--shadow);
 }
 
 .card_img {
@@ -91,8 +93,19 @@ p.price {
     margin: 3rem auto;
     padding: 1rem 2rem;
     border-radius: .7rem;
-    color: var(--white);
+    border: .1rem solid var(--black);
+    color: var(--black);
+    font-weight: bold;
     background-color: var(--yellow);
+    transition-property: background-color, box-shadow, color, padding;
+    transition-duration: .2s;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #bbc712;
+    box-shadow: .3rem .1rem .5rem  var(--shadow);
+    color: var(--white);
+    padding: 1.2rem 2.2rem;
 }
 
 .result p {
